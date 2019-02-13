@@ -1,0 +1,26 @@
+{{fruits}}
+
+<!--<h2>{{fruitdetails.name |uppercase}} Details</h2>-->
+<!--<div><span>id:</span>{{fruitdetails.id}}</div>-->
+<!--<div>-->
+  <!--<label for="name">name:-->
+  <!--<input [(ngModel)]="fruitdetails.name" placeholder="name">-->
+  <!--</label>-->
+<!--</div>-->
+
+<h2>INDIAN FRUITS:</h2>
+<ul class="fruits">
+  <li *ngFor="let fruit of fruts" (click)="onSelect(fruit)"
+  [class.selected]="fruit===selectedFruit">
+    <span class="badge">{{fruit.id}}<br></span>{{fruit.name}}
+  </li>
+</ul>
+<div *ngIf="selectedFruit">
+  <h2>{{selectedFruit.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedFruit.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedFruit.name" placeholder="name">
+    </label>
+  </div>
+</div>

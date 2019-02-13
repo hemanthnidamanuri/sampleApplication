@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+<h1>{{stud}}</h1>
+<div id="table">
+ <table>
+   <tr>
+     <th>ID:</th>
+     <th>NAME:</th>
+     <th>PHONE:</th>
+     <th>COLLEGE:</th>
+   </tr>
+   <tr *ngFor="let student of studs" (click)="onSelect(student)">
+     <td>{{student.id}}</td>
+     <td>{{student.name}}</td>
+     <td>{{student.phone}}</td>
+     <td>{{student.colg}}</td>
+   </tr>
+ </table>
+  <app-studentdetail [selectedstud]="selectedStudent"></app-studentdetail>
+</div>
+</body>
+</html>
