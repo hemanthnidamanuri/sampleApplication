@@ -10,6 +10,8 @@ import { StudentComponent } from './student/student.component';
 import { StudentdetailComponent } from './studentdetail/studentdetail.component';
 import {SeperateviewComponent} from './seperateview/seperateview.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import {routes} from './routes';
 
 
 @NgModule({
@@ -24,6 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    [RouterModule.forRoot(routes)],
     AppRoutingModule,
     FormsModule
   ],
