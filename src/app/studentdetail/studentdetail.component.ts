@@ -17,5 +17,11 @@ export class StudentdetailComponent implements OnInit {
 
   deleteRow(ss: Student) {
     this.selected.emit(ss);
+      if (ss.id === this.selectedstud.id){
+        this.selectedstud.id = null;
+        this.selectedstud.name = null;
+        this.selectedstud.colg = null;
+        this.selectedstud.phone = null;
+      }
   }
 }
