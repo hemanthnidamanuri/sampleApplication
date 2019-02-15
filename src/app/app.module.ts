@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FruitsComponent } from './fruits/fruits.component';
 import { StudentComponent } from './student/student.component';
 import { StudentdetailComponent } from './studentdetail/studentdetail.component';
+import {SeperateviewComponent} from './seperateview/seperateview.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -17,10 +19,12 @@ import { StudentdetailComponent } from './studentdetail/studentdetail.component'
     FooterComponent,
     FruitsComponent,
     StudentComponent,
-    StudentdetailComponent
+    StudentdetailComponent,
+    SeperateviewComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],

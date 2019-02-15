@@ -23,7 +23,7 @@
      <td>{{student.colg}}</td>
    </tr>
  </table>
-  <app-studentdetail [selectedstud]="selectedStudent"></app-studentdetail>
+  <app-studentdetail [selectedstud]="selectedStudent" (selected)="deletert($event)"></app-studentdetail>
 </div>
 </body>
 </html>

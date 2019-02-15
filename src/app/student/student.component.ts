@@ -20,4 +20,13 @@ export class StudentComponent implements OnInit {
       this.selectedStudent = student;
   }
 
+  deletert(selectedStud: any) {
+    for (let i = 0; i < this.studs.length; i++) {
+      let val = this.studs[i];
+      if (val.id === selectedStud.id){
+        const id = this.studs.indexOf(val);
+        this.studs.splice(id,1);
+      }
+    }
+  }
 }

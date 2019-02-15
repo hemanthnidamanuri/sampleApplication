@@ -15,12 +15,20 @@
     <th>NAME:</th>
     <th>PHONE:</th>
     <th>COLLEGE:</th>
+    <th>REMOVE</th>
+    <th>View</th>
   </tr>
   <tr>
     <td>{{selectedstud.id}}</td>
     <td>{{selectedstud.name}}</td>
     <td>{{selectedstud.phone}}</td>
     <td>{{selectedstud.colg}}</td>
+    <td>
+      <button type="button" (click)="deleteRow(selectedstud)">Remove</button>
+    </td>
+    <td>
+      <button type="button" routerLink="/seperateview">ViewinParticular</button>
+    </td>
   </tr>
 </table>
 </div>

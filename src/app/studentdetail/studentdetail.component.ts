@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Student } from '../Student';
 
 @Component({
@@ -9,9 +9,13 @@ import { Student } from '../Student';
 export class StudentdetailComponent implements OnInit {
 
   @Input() selectedstud: Student;
+  @Output() selected = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
+  deleteRow(ss: Student) {
+    this.selected.emit(ss);
+  }
 }
