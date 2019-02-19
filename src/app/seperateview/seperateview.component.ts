@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ɵConsole } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
 
@@ -8,7 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeperateviewComponent implements OnInit {
 
-  constructor() { }
+  id: number;
+  name: string;
+  phone: string;
+  colg: string;
+
+  constructor(private route: ActivatedRoute) {
+
+    this.route.params.subscribe(params => {
+        this.id = params['id'];
+        this.name = params['name'];
+        this.phone = params['phone'];
+        this.colg = params['colg'];
+    });
+  }
 
   ngOnInit() {
   }
